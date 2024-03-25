@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <h1 style="text-align: left; width:10%; display: inline-block;">Number: </h1>
+    <h1 style="text-align: left; display: inline-block;">{{ number() }}</h1>
+  </div>
+  <ng-container *ngIf="isOdd() === true; else red_highlight">
+    <h1  style="color: green">Is Odd: {{ isOdd() }}</h1>
+  </ng-container>
+  <button (click)="incrementNumber()">Increment</button>
+</div>
+
+<ng-template #red_highlight>
+  <h1 style="color: red">Is Odd: {{ isOdd() }}</h1>
+</ng-template>
+
